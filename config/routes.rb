@@ -1,8 +1,11 @@
 Project1::Application.routes.draw do
+  get "sessions/new"
+  post "sessions/create"
+  get "sessions/destory"
   resources :users
+  root to: 'users#new'
 
-  get "say/hello"
-  get "say/priyanka"
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
